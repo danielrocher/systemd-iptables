@@ -7,6 +7,7 @@ Example of a persistent firewall based on systemd for Debian Jessie.
 cp -r etc/iptables /etc/iptables
 cp -r etc/systemd/system/iptables.service /etc/systemd/system/
 cp -r etc/systemd/system/ip6tables.service /etc/systemd/system/
+chmod o-rwx /etc/iptables
 
 systemctl daemon-reload
 

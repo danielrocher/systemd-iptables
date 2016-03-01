@@ -20,9 +20,6 @@
 # ACCEPT all OUTPUT
 -A OUTPUT -p ALL -o eth0 -j ACCEPT
 
-# SSH
--A INPUT -p tcp -i eth0 --dport 22 -m state --state NEW -j ACCEPT
-
 # ICMP
 -A INPUT -p ipv6-icmp -j ACCEPT
 -A OUTPUT -p ipv6-icmp -j ACCEPT
