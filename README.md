@@ -2,6 +2,8 @@
 
 Example of a persistent firewall based on systemd for Debian Jessie.
 
+Based on https://github.com/gronke/systemd-iptables
+
 ### Install Steps
 ```sh
 cp -r etc/iptables /etc/iptables
