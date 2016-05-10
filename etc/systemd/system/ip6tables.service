@@ -1,8 +1,7 @@
 [Unit]
 Description=Packet Filtering Framework
 DefaultDependencies=no
-Wants=network-pre.target
-Before=network-pre.target
+Before=network.target
 
 [Service]
 Type=oneshot
@@ -11,3 +10,5 @@ ExecReload=/sbin/ip6tables-restore /etc/iptables/ip6tables.rules
 ExecStop=/etc/iptables/flush-ip6tables.sh
 RemainAfterExit=yes
 
+[Install]
+WantedBy=multi-user.target

@@ -6,7 +6,7 @@ Based on https://github.com/gronke/systemd-iptables
 
 ### Install Steps
 ```sh
-cp -r etc/iptables /etc/iptables
+cp -r etc/iptables /etc/
 cp -r etc/systemd/system/iptables.service /etc/systemd/system/
 cp -r etc/systemd/system/ip6tables.service /etc/systemd/system/
 chmod o-rwx /etc/iptables -R
