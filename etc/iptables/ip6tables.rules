@@ -6,8 +6,6 @@
 # loopback
 -A INPUT -i lo -j ACCEPT
 -A OUTPUT -o lo -j ACCEPT
--A INPUT -s ::1 -d ::1 -j ACCEPT
--A OUTPUT -s ::1 -d ::1 -j ACCEPT
 
 # ACCEPT already ESTABLISHED connections
 -A INPUT -p ALL -m state --state ESTABLISHED,RELATED -j ACCEPT
@@ -21,7 +19,7 @@
 -A OUTPUT -p ALL -j ACCEPT
 
 # ICMP
--A INPUT -p ipv6-icmp -j ACCEPT
--A OUTPUT -p ipv6-icmp -j ACCEPT
+-A INPUT -p icmpv6 -j ACCEPT
+-A OUTPUT -p icmpv6 -j ACCEPT
 
 COMMIT
