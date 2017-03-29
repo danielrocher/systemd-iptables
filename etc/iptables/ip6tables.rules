@@ -19,7 +19,7 @@
 -A OUTPUT -p ALL -j ACCEPT
 
 # ICMP
--A INPUT -p ipv6-icmp -j ACCEPT
--A OUTPUT -p ipv6-icmp -j ACCEPT
+-A INPUT -p icmpv6 -j ACCEPT
+-A OUTPUT -p icmpv6 -j ACCEPT
 
 COMMIT
