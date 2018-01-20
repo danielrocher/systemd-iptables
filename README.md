@@ -4,7 +4,27 @@ Example of a persistent firewall based on systemd for Debian Jessie.
 
 Based on https://github.com/gronke/systemd-iptables
 
-### Install Steps
+## Install/Uninstall Steps
+
+#### Install :
+
+```sh
+sudo make install
+```
+
+or install ipv4 rules only :
+```sh
+sudo make install_ip4tables
+```
+
+#### Uninstall :
+
+```sh
+sudo make uninstall
+```
+
+
+#### Manual installation :
 ```sh
 cp -r etc/iptables /etc/
 cp -r etc/systemd/system/iptables.service /etc/systemd/system/
