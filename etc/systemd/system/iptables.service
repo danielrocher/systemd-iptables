@@ -5,8 +5,8 @@ Before=network.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/sbin/iptables-restore /etc/iptables/iptables.rules
-ExecReload=/usr/sbin/iptables-restore /etc/iptables/iptables.rules
+ExecStart=/usr/sbin/iptables-restore --wait 5 /etc/iptables/iptables.rules
+ExecReload=/usr/sbin/iptables-restore --wait 5 /etc/iptables/iptables.rules
 ExecStop=/etc/iptables/flush-iptables.sh
 RemainAfterExit=yes
 
